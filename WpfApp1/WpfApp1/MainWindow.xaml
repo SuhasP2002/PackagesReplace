@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfSplitDropdown.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF DropDownButton SplitButton" Height="250" Width="400">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <!-- DropDown Button -->
+            <Button Content="DropDown Button" Click="DropDownButton_Click">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Option 1"/>
+                        <MenuItem Header="Option 2"/>
+                        <MenuItem Header="Option 3"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+
+            <!-- Split Button -->
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Action" Click="SplitButton_Click"/>
+                <ToggleButton Content="▼" Click="SplitButton_Toggle_Click">
+                    <ToggleButton.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Option A"/>
+                            <MenuItem Header="Option B"/>
+                            <MenuItem Header="Option C"/>
+                        </ContextMenu>
+                    </ToggleButton.ContextMenu>
+                </ToggleButton>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
